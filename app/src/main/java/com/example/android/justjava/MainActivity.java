@@ -1,6 +1,7 @@
 package com.example.android.justjava;
 
 import java.text.NumberFormat;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is called when the plus button is clicked.
      */
-    public void increment(View view){
+    public void increment(View view) {
         quantity = quantity + 1;
         display(quantity);
     }
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is called when the minus button is clicked.
      */
-    public void decrement(View view){
+    public void decrement(View view) {
         quantity = quantity - 1;
         display(quantity);
     }
@@ -38,14 +39,14 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is called when the order button is clicked.
      */
-    public void submitOrder(View view){
+    public void submitOrder(View view) {
         displayPrice(quantity * 5);
     }
 
     /**
      * This method displays the given quantity value on the screen.
      */
-    private void display(int number){
+    private void display(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given price on the screen.
      */
-    private void displayPrice(int number){
+    private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
