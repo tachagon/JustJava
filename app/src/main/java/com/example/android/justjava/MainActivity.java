@@ -6,7 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import static android.R.attr.name;
 
 /**
  * This app displays an order form to order coffee.
@@ -41,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
+        EditText nameEditText = (EditText) findViewById(R.id.name_edit_text);
+        String name = nameEditText.getText().toString();
+
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
         boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
 
@@ -48,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         boolean hasChocolate = chocolateCheckBox.isChecked();
 
         int price = calculatePrice();
-        displayMessage(createOrderSummary(price, hasWhippedCream, hasChocolate));
+        displayMessage(createOrderSummary(name, price, hasWhippedCream, hasChocolate));
     }
 
     /**
@@ -63,12 +69,12 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Create summary of the order.
      *
+     * @param name            of customer
      * @param price           of the order
      * @param addWhippedCream is whether or not the user wants whipped cream topping
      * @return text summary of order
      */
-    private String createOrderSummary(int price, boolean addWhippedCream, boolean addChocolate) {
-        String name = "Tatchagon Koonkoei";
+    private String createOrderSummary(String name, int price, boolean addWhippedCream, boolean addChocolate) {
         String message = "Name: " + name;
         message += "\nAdd whipped cream? " + addWhippedCream;
         message += "\nAdd chocolate? " + addChocolate;
