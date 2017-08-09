@@ -7,7 +7,7 @@
     <string name="name">ชื่อ</string>
 
     <!-- Header text for the list of toppings [CHAR LIMIT=20] -->
-    <string name="toppings">เครื่องโรยหน้า</string>
+    <string name="toppings">ท็อปปิ้ง</string>
 
     <!-- Hint text display in the CheckBox [CHAR LIMIT=20] -->
     <string name="whipped_cream">วิปครีม</string>
