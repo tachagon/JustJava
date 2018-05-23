@@ -11,8 +11,8 @@ I have learned how to make my app interactive using buttons and changing text fr
 
 * English Version
 
-![Example of tatchagon's Coffee-Ordering App](https://i.imgur.com/ZbacQzk.jpg)
+![Example of tatchagon's Coffee-Ordering App](https://i.imgur.com/ZbacQzkl.jpg)
 
 * Thai Version
 
-![Example of tatchagon's Coffee-Ordering App](https://i.imgur.com/HXDymjd.jpg)
+![Example of tatchagon's Coffee-Ordering App](https://i.imgur.com/HXDymjdl.jpg)
